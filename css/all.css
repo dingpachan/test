@@ -210,7 +210,7 @@ table {
 .box a{
 	display: block;
 	margin: 0 auto;
-	margin-bottom: 5px;
+	margin-bottom: 2px;
 	text-align: center;
 	text-decoration: none;
 	font-family: 微軟正黑體;
@@ -235,36 +235,10 @@ table {
 .box a.vote:hover{
 	color: #444;
 }
-.box a.thickbox{
-	display: block;
-	position: relative;
-	float: left;
-	border-radius: 10px;
-	background-color: #3a5795;
-	width: 85px;
-	height: 35px;
-	//margin: auto;
-	margin-bottom: 15px;
-	text-align: center;
-	text-decoration: none;
-	line-height: 35px;
-	font-family: 微軟正黑體;
-	color: #FFF;
-}
-.box a.thickbox:hover{
-	color: #444;
-}
-.thickbox img{
-	display: block;
-	width: 30px;
-	height: 30px;
-	position: relative;
-	float: left;
-}
-.box input{
+/*.box input{
 	margin:0 40%;
 	margin-bottom: 10px;
-}
+}*/
 .box a.facebook{
 	display: block;
 	position: relative;
