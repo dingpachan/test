@@ -2,10 +2,12 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta property="og:title" content="i-Voting"/> <!-- 分享的TITLE  -->
-	<meta property="og:description" content="票選年度最佳人氣小小歐吉桑"/> <!-- 分享的內容描述 -->
-	<meta property="og:url" content="http://dingpachan.github.io/test/"/> <!-- 分享網頁的連結 -->
-	<meta property="og:image" content="https://lh5.ggpht.com/UPrFExoZoYC1e2DK7mGSwpyseKzuLA-Yc-q3-uoaTFSfwwAShoWhC-2cHnQnfaamL8w=w300"/> <!-- 圖片URL -->
+	<meta property="og:title" content="i-Voting 小小歐吉桑"/>
+	<!-- <meta name="og:description" content="網站要呈現的敘述設定" /> -->
+	<meta property="og:type" content="website"/>
+	<meta property="og:url" content="http://dingpachan.github.io/test/"/>
+	<meta property="og:image" content="http://lh5.ggpht.com/UPrFExoZoYC1e2DK7mGSwpyseKzuLA-Yc-q3-uoaTFSfwwAShoWhC-2cHnQnfaamL8w=w300"/>
+	<meta property="og:site_name" content="i-Voting" />
 	<title>票選小小歐吉桑</title>
 	<link rel="shortcut icon" href="images/logo2.png">
 	<link rel="stylesheet" href="css/all.css">
@@ -30,7 +32,7 @@
 		<div class="background"><img src="images/header.PNG" /></div>
 		
 		<div class="logo">
-			<a href="index.html">i-Voting</a>
+			<a href="index.html"><img src="images/logo2.png" /></a>
 		</div>
 
 		<a href="index.html"><h1>票選年度最佳人氣小小歐吉桑</h1></a>
@@ -47,59 +49,68 @@
 			<ul>
 				<li>
 					<div class="box">
-						<a class="img-link" href="images/oji1.jpg" data-lightbox="image-set" data-title="歐吉桑一號"><img class="image-link" src="images/1.jpg" width="160" height="240" /></a>
+						<a class="img-link" href="images/oji1.jpg" data-lightbox="image-set" data-title="歐吉桑一號"><img class="image-link" src="images/1.jpg" width="160" height="240" /><h2>小小歐吉桑</h2></a>
+						<h3>目前票數</h3>
 						<a href="#" class="vote">投給他</a>
 						<!-- <a class="thickbox" href="vote.html?keepThis=true&TB_iframe=true&height=400&width=600" name="thickbox" title="票選年度最佳小小歐吉桑" onclick="javascript:postToFeed();">幫他拉票</a> -->
 						
-						<a class="thickbox" href="javascript:void(0);" onclick="window.open('http://www.facebook.com/share.php?u='+fbhtml_url);return false;">幫他拉票</a>
+						<!-- <a class="thickbox" href="javascript:void(0);" onclick="window.open('http://www.facebook.com/sharer/sharer.php?u='+fbhtml_url);return false;">幫他拉票</a> -->
 
-						<!-- <a href="http://www.facebook.com/share.php?u="+'fbhtml_url' class="thickbox">幫他拉票</a> -->
+						<!-- <a class="thickbox" href="javascript:void(0);" onclick="goto();">幫他拉票</a> -->
+						<a class="facebook" href="javascript: return false;" onclick="goto(); ">幫他拉票</a>
 						
 					</div>
 				</li>
 
 				<li>
 					<div class="box">
-						<a href="images/oji2.jpg" data-lightbox="image-set" data-title="歐吉桑二號"><img class="image-link" src="images/2.jpg" width="160" height="240" /></a>
+						<a href="images/oji2.jpg" data-lightbox="image-set" data-title="歐吉桑二號"><img class="image-link" src="images/2.jpg" width="160" height="240" /><h2>聖誕歐吉桑</h2></a>
+						<h3>目前票數</h3>
 						<a href="#" class="vote">投給他</a>
-						<a class="thickbox" href="vote.html?keepThis=true&TB_iframe=true&height=400&width=600" name="thickbox" title="票選年度最佳小小歐吉桑" onclick="javascript:check();">幫他拉票</a>
+						<a class="facebook" href="javascript: return false;" onclick="goto(); ">幫他拉票</a>
 					</div>
 				</li>
 
 				<li><div class="box">
-					<a href="images/oji3.jpg" data-lightbox="image-set" data-title="歐吉桑三號"><img class="image-link" src="images/3.jpg" width="160" height="240" /></a>
+					<a href="images/oji3.jpg" data-lightbox="image-set" data-title="歐吉桑三號"><img class="image-link" src="images/3.jpg" width="160" height="240" /><h2>大哥歐吉桑</h2></a>
+					<h3>目前票數</h3>
 					<a href="#" class="vote">投給他</a>
-						<a class="thickbox" href="vote.html?keepThis=true&TB_iframe=true&height=400&width=600" name="thickbox" title="票選年度最佳小小歐吉桑" onclick="javascript:check();">幫他拉票</a>
+					<a class="facebook" href="javascript: return false;" onclick="goto(); ">幫他拉票</a>
 				</div></li>
 				
 				<li><div class="box">
-					<a href="images/oji4.jpg" data-lightbox="image-set" data-title="歐吉桑四號"><img class="image-link" src="images/4.jpg" width="160" height="240" /></a>
+					<a href="images/oji4.jpg" data-lightbox="image-set" data-title="歐吉桑四號"><img class="image-link" src="images/4.jpg" width="160" height="240" /><h2>草帽歐吉桑</h2></a>
+					<h3>目前票數</h3>
 					<a href="#" class="vote">投給他</a>
-						<a class="thickbox" href="vote.html?keepThis=true&TB_iframe=true&height=400&width=600" name="thickbox" title="票選年度最佳小小歐吉桑" onclick="javascript:check();">幫他拉票</a>
+					<a class="facebook" href="javascript: return false;" onclick="goto(); ">幫他拉票</a>
 				</div></li>
 				
 				<li><div class="box">
-					<a href="images/oji5.jpg" data-lightbox="image-set" data-title="歐吉桑五號"><img class="image-link" src="images/5.jpg" width="160" height="240" /></a>
+					<a href="images/oji5.jpg" data-lightbox="image-set" data-title="歐吉桑五號"><img class="image-link" src="images/5.jpg" width="160" height="240" /><h2>姐姐歐吉桑</h2></a>
+					<h3>目前票數</h3>
 					<a href="#" class="vote">投給他</a>
-						<a class="thickbox" href="vote.html?keepThis=true&TB_iframe=true&height=400&width=600" name="thickbox" title="票選年度最佳小小歐吉桑" onclick="javascript:check();">幫他拉票</a>
+					<a class="facebook" href="javascript: return false;" onclick="goto(); ">幫他拉票</a>
 				</div></li>
 				
 				<li><div class="box">
-					<a href="images/oji6.jpg" data-lightbox="image-set" data-title="歐吉桑六號"><img class="image-link" src="images/6.jpg" width="160" height="240" /></a>
+					<a href="images/oji6.jpg" data-lightbox="image-set" data-title="歐吉桑六號"><img class="image-link" src="images/6.jpg" width="160" height="240" /><h2>神仙歐吉桑</h2></a>
+					<h3>目前票數</h3>
 					<a href="#" class="vote">投給他</a>
-						<a class="thickbox" href="vote.html?keepThis=true&TB_iframe=true&height=400&width=600" name="thickbox" title="票選年度最佳小小歐吉桑" onclick="javascript:check();">幫他拉票</a>
+					<a class="facebook" href="javascript: return false;" onclick="goto(); ">幫他拉票</a>
 				</div></li>
 				
 				<li><div class="box">
-					<a href="images/oji7.jpg" data-lightbox="image-set" data-title="歐吉桑七號"><img class="image-link" src="images/7.jpg" width="160" height="240" /></a>
+					<a href="images/oji7.jpg" data-lightbox="image-set" data-title="歐吉桑七號"><img class="image-link" src="images/7.jpg" width="160" height="240" /><h2>歐吉桑國王</h2></a>
+					<h3>目前票數</h3>
 					<a href="#" class="vote">投給他</a>
-						<a class="thickbox" href="vote.html?keepThis=true&TB_iframe=true&height=400&width=600" name="thickbox" title="票選年度最佳小小歐吉桑" onclick="javascript:check();">幫他拉票</a>
+					<a class="facebook" href="javascript: return false;" onclick="goto(); ">幫他拉票</a>
 				</div></li>
 				
 				<li><div class="box">
-					<a href="images/oji8.jpg" data-lightbox="image-set" data-title="歐吉桑八號"><img class="image-link" src="images/8.jpg" width="160" height="240" /></a>
+					<a href="images/oji8.jpg" data-lightbox="image-set" data-title="歐吉桑八號"><img class="image-link" src="images/8.jpg" width="160" height="240" /><h2>芭蕾歐吉桑</h2></a>
+					<h3>目前票數</h3>
 					<a href="#" class="vote">投給他</a>
-						<a class="thickbox" href="vote.html?keepThis=true&TB_iframe=true&height=400&width=600" name="thickbox" title="票選年度最佳小小歐吉桑" onclick="javascript:check();">幫他拉票</a>
+					<a class="facebook" href="javascript: return false;" onclick="goto(); ">幫他拉票</a>
 				</div></li>
 			</ul>
 		</div>
@@ -108,5 +119,14 @@
 </div>
 
 </body>
+
+<script type="text/javascript">
+
+function goto(){
+	window.open('http://www.facebook.com/sharer/sharer.php?u='+fbhtml_url,'_blank','width=750,height=500,left=550,top=300');
+	//return false;
+}
+
+</script>
 
 </html>
