@@ -1,0 +1,133 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul, li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.box{
+    width: 480px;
+    height: 350px;
+    margin: 0 auto;
+    margin-top: 35px;
+}
+.box h1{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 微軟正黑體; 
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.box textarea{
+    position: relative;
+    font-size: 18px;
+    line-height: 1em;
+    color: #000;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-left: 5px;
+}
+.box h2{
+    width: 140px;
+    position: relative;
+    float: left;
+    font-size:20px;
+    font-family: 微軟正黑體; 
+    margin-top: 10px;
+}
+.box a{
+    font-family: 微軟正黑體;
+}
+.box input[type="text"]{
+    width: 100px;
+    height: 16px;
+    font-size: 16px;
+    position: relative;
+    float: left;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+.code{
+    width:150px;
+    height:40px;
+    background:url(../images/code_bg.jpg);
+    font-family:Arial;
+    color: #0044BB;
+    font-size:30px;
+    font-style: italic;
+    border:0;
+    padding:2px 3px;
+    letter-spacing:3px;
+    font-weight:bolder; 
+    position:;            
+    float:left;            
+    cursor:pointer;
+    line-height:40px;
+    text-align:center;
+    vertical-align:middle;
+}
+.box a{
+    position: relative;
+    float: left;
+    text-decoration:none;
+    font-size:12px;
+    color:#288bc4;
+    padding-top: 30px;
+    margin-left: 10px;
+}
+.box a:hover{
+    text-decoration:underline;
+}
+.box input[type="button"]{
+    height: 30px;
+    width: 100px;
+    font-size: 20px;
+    font-family: 微軟正黑體;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #99BBFF;
+    color: #fff;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-left: 180px;
+    cursor: pointer;
+}
