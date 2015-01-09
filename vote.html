@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/vote.css">
+	<script type="text/javascript" src="js/vote.js"></script>
+</head>
+<body onload="createCode()">
+	<div class="box">
+		<h1>我投給XX的理由：</h1>
+		<form id="form1" onsubmit="validateCode()">
+			<textarea name="reason" id="" cols="45" rows="9"></textarea>
+			<h2>請輸入驗證碼：</h2>
+			<input type="text" id="inputCode" />
+			<div class="code" id="checkCode" onclick="createCode()"></div>
+			<a href="" onclick="createCode()">換一張</a>
+			<input id="Button1"  onclick="validateCode();" type="button" value="送出" />
+	    </form>		
+	</div>
+</body>
+</html>
