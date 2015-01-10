@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta property="og:title" content="i-Voting"/> <!-- 分享的TITLE  -->
-	<meta property="og:description" content="票選年度最佳人氣小小歐吉桑"/> <!-- 分享的內容描述 -->
-	<meta property="og:url" content="http://dingpachan.github.io/test/"/> <!-- 分享網頁的連結 -->
-	<meta property="og:image" content="https://lh5.ggpht.com/UPrFExoZoYC1e2DK7mGSwpyseKzuLA-Yc-q3-uoaTFSfwwAShoWhC-2cHnQnfaamL8w=w300"/> <!-- 圖片URL -->
+	<meta property="og:title" content="i-Voting 小小歐吉桑"/>
+	<meta property="og:type" content="website"/>
+	<meta property="og:url" content="http://dingpachan.github.io/test/"/>
+	<meta property="og:image" content="http://lh5.ggpht.com/UPrFExoZoYC1e2DK7mGSwpyseKzuLA-Yc-q3-uoaTFSfwwAShoWhC-2cHnQnfaamL8w=w300"/>
+	<meta property="og:site_name" content="i-Voting" />
 	<title>票選小小歐吉桑</title>
 	<link rel="shortcut icon" href="images/logo2.png">
 	<link rel="stylesheet" href="css/all.css">
@@ -19,6 +20,7 @@
 	<script src="js/thickbox.js"></script>
 	<script type="text/javascript" src="http://d3js.org/d3.v3.min.js"  charset="utf-8"></script>
 	<script type="text/javascript" src="js/share.js"></script>
+	<script type="text/javascript" src="js/facebook.js"></script>
 	<script type="text/javascript" src="js/vote.js"></script>
 	<script type="text/javascript" src="js/statistic.js"></script>
 	
@@ -126,5 +128,58 @@
 </div>
 
 </body>
+
+<script type="text/javascript">
+FB.init({
+    appId: '538493282919996',
+    status: true,
+    cookie: true,
+    xfbml: true,
+    channelURL: 'http://dingpachan.github.io/test/', //
+    oauth: true
+});
+function fbshare(v1,img){
+	var cap=" 大家好！我是【"+v1+"】";
+	FB.getLoginStatus(function (response) {
+		if (response.status === 'connected') {
+			sd(cap,img);
+		} else {
+			FB.login(function (response) {
+				if (response.authResponse) {
+							var uid = response.authResponse.userID;
+							var accessToken = response.authResponse.accessToken;
+					sd(cap,img);
+				} else {
+					alert('登入失敗!');
+				}
+			}, {
+				scope: 'email,publish_stream'
+			});
+		}
+	});	
+}
+
+function sd(cap,img){
+	FB.ui(
+		{ 
+			method: 'feed',
+			name: '票選年度最佳人氣小小歐吉桑',
+			link: 'http://dingpachan.github.io/test/',
+			picture: 'https://github.com/dingpachan/test/tree/gh-pages'+img,
+			caption: cap, 
+			description: ' 快點進來投我一票吧! 讓我成為最佳人氣的歐吉桑!! ', 
+		}, 
+			function(response) { 
+			if (response && response.post_id) {
+				alert('分享成功'); 
+			} else { 
+				alert('分享失敗');
+			}
+			FB.logout(function(response) {
+			});
+		} 
+	);
+}
+</script>
 
 </html>
