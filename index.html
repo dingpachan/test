@@ -2,29 +2,26 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta property="og:title" content="i-Voting 小小歐吉桑"/>
-	<!-- <meta name="og:description" content="網站要呈現的敘述設定" /> -->
-	<meta property="og:type" content="website"/>
-	<meta property="og:url" content="http://dingpachan.github.io/test/"/>
-	<meta property="og:image" content="http://lh5.ggpht.com/UPrFExoZoYC1e2DK7mGSwpyseKzuLA-Yc-q3-uoaTFSfwwAShoWhC-2cHnQnfaamL8w=w300"/>
-	<meta property="og:site_name" content="i-Voting" />
+	<meta property="og:title" content="i-Voting"/> <!-- 分享的TITLE  -->
+	<meta property="og:description" content="票選年度最佳人氣小小歐吉桑"/> <!-- 分享的內容描述 -->
+	<meta property="og:url" content="http://dingpachan.github.io/test/"/> <!-- 分享網頁的連結 -->
+	<meta property="og:image" content="https://lh5.ggpht.com/UPrFExoZoYC1e2DK7mGSwpyseKzuLA-Yc-q3-uoaTFSfwwAShoWhC-2cHnQnfaamL8w=w300"/> <!-- 圖片URL -->
 	<title>票選小小歐吉桑</title>
 	<link rel="shortcut icon" href="images/logo2.png">
 	<link rel="stylesheet" href="css/all.css">
 	<link rel="stylesheet" href="css/lightbox.css">
 	<link rel="stylesheet" href="css/thickbox.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.3.3.min.js"></script>
 	<script src="js/jquery-1.11.0.min.js"></script>
 	<script src="js/lightbox.min.js"></script>
 	<script src="js/thickbox.js"></script>
-	<script type="text/javascript" src="js/facebook.js"></script>	
-
+	<script type="text/javascript" src="http://d3js.org/d3.v3.min.js"  charset="utf-8"></script>
+	<script type="text/javascript" src="js/share.js"></script>
+	<script type="text/javascript" src="js/vote.js"></script>
+	<script type="text/javascript" src="js/statistic.js"></script>
 	
-	<script>
-		//var fbhtml_url=window.location.toString();
-		//var fbhtml_url="www.google.com";
-		var fbhtml_url="http://dingpachan.github.io/test/";
-	</script>
-
 </head>
 <body>
 
@@ -34,27 +31,39 @@
 		<div class="background"><img src="images/header.PNG" /></div>
 		
 		<div class="logo">
-			<a href="index.html"><img src="images/logo2.png" /></a>
+			<a href="index.html">i-Voting</a>
 		</div>
-
+		
 		<a href="index.html"><h1>票選年度最佳人氣小小歐吉桑</h1></a>
-
-		<div class="right">
-			<a class="right" href="login.html">Log in | Sign up</a>
-		</div>
+		
+		<div class="right"></div>
 
 	</div>
 	
 	<div class="main">
-		<div class="latest"></div>
+		<div class="latest">
+			<div class="draw">
+  				<div class="Oji">
+				    小小歐吉桑<br>
+				    聖誕歐吉桑<br>
+				    大哥歐吉桑<br>
+				    草帽歐吉桑<br>
+				    姐姐歐吉桑<br>
+				    神仙歐吉桑<br>
+				    歐吉桑國王<br>
+				  	芭蕾歐吉桑<br>
+ 	 			</div>
+  			<div class="chart"></div>
+  			</div>
+		</div>
 		<div class="candidate">
 			<ul>
 				<li>
 					<div class="box">
-						<a class="img-link" href="images/oji1.jpg" data-lightbox="image-set" data-title="歐吉桑一號"><img class="image-link" src="images/1.jpg" width="160" height="240" /></a>
-						<h2>小小歐吉桑</h2>
-						<h3>目前票數</h3>
-						<a href="#" class="vote">投給他</a>
+						<a class="img-link" href="images/oji1.png" data-lightbox="image-set" data-title="歐吉桑一號"><img class="image-link" src="images/1.jpg" width="160" height="240" /><h2>小小歐吉桑</h2></a>
+						<h3>目前 <span></span> 票</h3>
+
+						<a class="vote" onclick="Vote(1)">投給他</a>
 						<a class="facebook" href='#' onclick="javascript:fbshare('小小歐吉桑','images/1.jpg')">幫他拉票</a>
 						
 					</div>
@@ -62,59 +71,52 @@
 
 				<li>
 					<div class="box">
-						<a href="images/oji2.jpg" data-lightbox="image-set" data-title="歐吉桑二號"><img class="image-link" src="images/2.jpg" width="160" height="240" /></a>
-						<h2>聖誕歐吉桑</h2>
-						<h3>目前票數</h3>
-						<a href="#" class="vote">投給他</a>
+						<a href="images/oji2.png" data-lightbox="image-set" data-title="歐吉桑二號"><img class="image-link" src="images/2.jpg" width="160" height="240" /><h2>聖誕歐吉桑</h2></a>
+						<h3>目前 <span></span> 票</h3>
+						<a class="vote" onclick="Vote(2)">投給他</a>
 						<a class="facebook" href='#' onclick="javascript:fbshare('聖誕歐吉桑','images/2.jpg')">幫他拉票</a>
 					</div>
 				</li>
 
 				<li><div class="box">
-					<a href="images/oji3.jpg" data-lightbox="image-set" data-title="歐吉桑三號"><img class="image-link" src="images/3.jpg" width="160" height="240" /></a>
-					<h2>大哥歐吉桑</h2>
-					<h3>目前票數</h3>
-					<a href="#" class="vote">投給他</a>
+					<a href="images/oji3.png" data-lightbox="image-set" data-title="歐吉桑三號"><img class="image-link" src="images/3.jpg" width="160" height="240" /><h2>大哥歐吉桑</h2></a>
+					<h3>目前 <span></span> 票</h3>
+					<a class="vote" onclick="Vote(3)">投給他</a>
 					<a class="facebook" href='#' onclick="javascript:fbshare('大哥歐吉桑','images/3.jpg')">幫他拉票</a>
 				</div></li>
 				
 				<li><div class="box">
-					<a href="images/oji4.jpg" data-lightbox="image-set" data-title="歐吉桑四號"><img class="image-link" src="images/4.jpg" width="160" height="240" /></a>
-					<h2>草帽歐吉桑</h2>
-					<h3>目前票數</h3>
-					<a href="#" class="vote">投給他</a>
+					<a href="images/oji4.png" data-lightbox="image-set" data-title="歐吉桑四號"><img class="image-link" src="images/4.jpg" width="160" height="240" /><h2>草帽歐吉桑</h2></a>
+					<h3>目前 <span></span> 票</h3>
+					<a class="vote" onclick="Vote(4)">投給他</a>
 					<a class="facebook" href='#' onclick="javascript:fbshare('草帽歐吉桑','images/4.jpg')">幫他拉票</a>
 				</div></li>
 				
 				<li><div class="box">
-					<a href="images/oji5.jpg" data-lightbox="image-set" data-title="歐吉桑五號"><img class="image-link" src="images/5.jpg" width="160" height="240" /></a>
-					<h2>姐姐歐吉桑</h2>
-					<h3>目前票數</h3>
-					<a href="#" class="vote">投給他</a>
+					<a href="images/oji5.png" data-lightbox="image-set" data-title="歐吉桑五號"><img class="image-link" src="images/5.jpg" width="160" height="240" /><h2>姐姐歐吉桑</h2></a>
+					<h3>目前 <span></span> 票</h3>
+					<a class="vote" onclick="Vote(5)">投給他</a>
 					<a class="facebook" href='#' onclick="javascript:fbshare('姐姐歐吉桑','images/5.jpg')">幫他拉票</a>
 				</div></li>
 				
 				<li><div class="box">
-					<a href="images/oji6.jpg" data-lightbox="image-set" data-title="歐吉桑六號"><img class="image-link" src="images/6.jpg" width="160" height="240" /></a>
-					<h2>神仙歐吉桑</h2>
-					<h3>目前票數</h3>
-					<a href="#" class="vote">投給他</a>
+					<a href="images/oji6.png" data-lightbox="image-set" data-title="歐吉桑六號"><img class="image-link" src="images/6.jpg" width="160" height="240" /><h2>神仙歐吉桑</h2></a>
+					<h3>目前 <span></span> 票</h3>
+					<a class="vote" onclick="Vote(6)">投給他</a>
 					<a class="facebook" href='#' onclick="javascript:fbshare('神仙歐吉桑','images/6.jpg')">幫他拉票</a>
 				</div></li>
 				
 				<li><div class="box">
-					<a href="images/oji7.jpg" data-lightbox="image-set" data-title="歐吉桑七號"><img class="image-link" src="images/7.jpg" width="160" height="240" /></a>
-					<h2>歐吉桑國王</h2>
-					<h3>目前票數</h3>
-					<a href="#" class="vote">投給他</a>
+					<a href="images/oji7.png" data-lightbox="image-set" data-title="歐吉桑七號"><img class="image-link" src="images/7.jpg" width="160" height="240" /><h2>歐吉桑國王</h2></a>
+					<h3>目前 <span></span> 票</h3>
+					<a class="vote" onclick="Vote(7)">投給他</a>
 					<a class="facebook" href='#' onclick="javascript:fbshare('歐吉桑國王','images/7.jpg')">幫他拉票</a>
 				</div></li>
 				
 				<li><div class="box">
-					<a href="images/oji8.jpg" data-lightbox="image-set" data-title="歐吉桑八號"><img class="image-link" src="images/8.jpg" width="160" height="240" /></a>
-					<h2>芭蕾歐吉桑</h2>
-					<h3>目前票數</h3>
-					<a href="#" class="vote">投給他</a>
+					<a href="images/oji8.png" data-lightbox="image-set" data-title="歐吉桑八號"><img class="image-link" src="images/8.jpg" width="160" height="240" /><h2>芭蕾歐吉桑</h2></a>
+					<h3>目前 <span></span> 票</h3>
+					<a class="vote" onclick="Vote(8)">投給他</a>
 					<a class="facebook" href='#' onclick="javascript:fbshare('芭蕾歐吉桑','images/8.jpg')">幫他拉票</a>
 				</div></li>
 			</ul>
@@ -124,60 +126,5 @@
 </div>
 
 </body>
-
-<script>
-FB.init({
-    // appId: '610164012333185',
-    appId: '538493282919996',
-    status: true,
-    cookie: true,
-    xfbml: true,
-    channelURL: 'http://dingpachan.github.io/test/', //
-    oauth: true
-});
-function fbshare(v1,img){
-	var cap=" 大家好！我是【"+v1+"】";
-	FB.getLoginStatus(function (response) {
-		if (response.status === 'connected') {
-			sd(cap,img);
-		} else {
-			FB.login(function (response) {
-				if (response.authResponse) {
-							var uid = response.authResponse.userID;
-							var accessToken = response.authResponse.accessToken;
-					sd(cap,img);
-				} else {
-					alert('登入失敗!');
-				}
-			}, {
-				scope: 'email,publish_stream'
-			});
-		}
-	});	
-}
-
-function sd(cap,img){
-	FB.ui(
-		{ 
-			method: 'feed',
-			name: '票選年度最佳人氣小小歐吉桑',
-			link: 'http://dingpachan.github.io/test/',
-			picture: 'https://github.com/dingpachan/test/tree/gh-pages'+img,
-			caption: cap, 
-			description: ' 快點進來投我一票吧! 讓我成為最佳人氣的歐吉桑!! ', 
-		}, 
-			function(response) { 
-			if (response && response.post_id) {
-				alert('分享成功'); 
-			} else { 
-				alert('分享失敗');
-			}
-			FB.logout(function(response) {
-			});
-		} 
-	);
-}
-</script>
-
 
 </html>
